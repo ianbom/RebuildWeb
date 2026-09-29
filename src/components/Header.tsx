@@ -43,10 +43,10 @@ export function Header() {
 
   return <header className={`site-header${hidden ? " is-hidden" : ""}${scrolled ? " is-scrolled" : ""}${menuOpen ? " menu-active" : ""}`}>
     <div className="header-inner shell">
-      <Link className="wordmark" href="/" aria-label={`${site.companyName} home`} onClick={() => setMenuOpen(false)}><span className="wordmark-symbol" aria-hidden="true">N</span><span className="wordmark-text">{site.companyName.toLowerCase()}</span></Link>
-      <nav className="desktop-nav" aria-label="Main navigation">{site.navigation.map((item) => <a key={item.label} href={item.href}>{item.label}</a>)}</nav>
-      <div className="header-actions"><a className="contact-pill" href="#contact" onClick={() => setMenuOpen(false)}>Let&apos;s Talk <span aria-hidden="true">↗</span></a><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button></div>
+      <Link className="wordmark" href="/" aria-label={`${site.companyName} beranda`} onClick={() => setMenuOpen(false)}><span>temu</span><span className="wordmark-blue">web</span><span className="wordmark-dot">.</span></Link>
+      <nav className="desktop-nav" aria-label="Navigasi utama">{site.navigation.map((item) => <a key={item.label} href={item.href}>{item.label}</a>)}</nav>
+      <div className="header-actions"><a className="contact-pill" href="#contact" onClick={() => setMenuOpen(false)}>Mulai Proyek <span aria-hidden="true">↗</span></a><button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? "Tutup menu" : "Buka menu"} onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button></div>
     </div>
-    <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation" inert={!menuOpen}>{site.navigation.map((item) => <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}<span aria-hidden="true">↗</span></a>)}<a href="#contact" onClick={() => setMenuOpen(false)}>Contact<span aria-hidden="true">↗</span></a><div className="mobile-menu-bottom"><a href={`mailto:${site.email}`}>{site.email}</a><a href={site.whatsappUrl}>{site.phone}</a><p>{site.address}</p></div></nav>
+    <nav id="mobile-navigation" className="mobile-navigation" aria-label="Navigasi mobile" inert={!menuOpen}>{site.navigation.map((item) => <a key={item.label} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}<span aria-hidden="true">↗</span></a>)}<a href="#contact" onClick={() => setMenuOpen(false)}>Mulai Proyek<span aria-hidden="true">↗</span></a><div className="mobile-menu-bottom"><a href={`mailto:${site.email}`}>{site.email}</a><a href={site.whatsappUrl}>{site.phone}</a><p>{site.address}</p></div></nav>
   </header>;
 }

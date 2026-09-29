@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { site } from "@/data/site";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: `Privacy Policy — ${site.companyName}`, alternates: { canonical: "/privacy" }, robots: { index: false } };
+export const metadata: Metadata = { title: `Kebijakan Privasi — ${site.companyName}`, alternates: { canonical: "/privacy" }, robots: { index: false } };
 
 export default function Privacy() {
-  return <main className="legal-page"><Link href="/" className="legal-home">← {site.companyName}</Link><p className="eyebrow">Legal / Draft</p><h1>Privacy Policy</h1><p>This draft describes how inquiries sent to {site.companyName} may be handled. It must be reviewed and replaced with a policy matching actual operations before launch.</p><h2>Contact inquiries</h2><p>If you contact us by email or WhatsApp, the information you provide is used to respond to your request. Please do not send sensitive information in an initial inquiry.</p><h2>Questions</h2><p>For privacy questions, email <a href={`mailto:${site.email}`}>{site.email}</a>.</p></main>;
+  return <main className="legal-page"><Link href="/" className="legal-home">← {site.companyName}</Link><p className="eyebrow">Dokumen sementara</p><h1>Kebijakan Privasi</h1><p>Halaman ini masih berupa draf tentang cara {site.companyName} menangani pesan yang masuk. Sebelum situs diluncurkan, isinya perlu ditinjau dan disesuaikan dengan cara kerja yang sebenarnya.</p><h2>Pesan yang Anda kirim</h2><p>Jika Anda menghubungi kami lewat email atau WhatsApp, informasi yang Anda berikan kami gunakan untuk membalas pesan Anda. Mohon jangan mengirim informasi sensitif saat pertama kali menghubungi kami.</p><h2>Ada pertanyaan?</h2><p>Untuk pertanyaan soal privasi, kirim email ke <a href={`mailto:${site.email}`}>{site.email}</a>.</p></main>;
 }

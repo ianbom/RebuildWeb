@@ -1,6 +1,6 @@
-# Nexora
+# TemuWeb
 
-Original Indonesian software-house concept site. Built with Next.js App Router, TypeScript, Tailwind CSS, and locally composed CSS product artwork.
+Indonesian software-house and digital product studio concept site. Built with Next.js App Router, TypeScript, Tailwind CSS, and locally composed CSS product artwork.
 
 ## Run
 
@@ -8,8 +8,8 @@ Original Indonesian software-house concept site. Built with Next.js App Router, 
 
 ## Visual system
 
-The Clay reference informed the editorial rhythm rather than its identity: a light 110px desktop header, large left-aligned display type, roughly 5vw desktop gutters, 16:9 hero media, two-column capabilities, subdued client wall, staggered/wide project showcases, spacious statements, then dark editorial insights and FAQ. Mobile switches to 24px gutters, a 68px header with full-screen menu, a three-line hero followed immediately by media, and single-column project stories. Manrope provides one consistent grotesk family; neutral surfaces dominate, with color confined to original project artwork. Motion is restrained and respects reduced-motion preferences.
+The visual system pairs editorial typography and spacious layouts with TemuWeb blue, a restrained orange signature, and neutral surfaces. Manrope provides one consistent grotesk family. Motion is restrained and respects reduced-motion preferences.
 
 ## Before launch
 
-Replace fictional client/project names and unverified trust claims with approved references. Set real social profile links and contact details in `src/data/site.ts`. Review the draft Privacy Policy and Terms. Confirm ownership of `nexora.id`, used as the canonical origin.
+Replace fictional client/project names and unverified trust claims with approved references. Set real social profile links and contact details in `src/data/site.ts`. Review the draft Privacy Policy and Terms. Confirm ownership of `temuweb.id`, used as the canonical origin.
