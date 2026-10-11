@@ -4,7 +4,7 @@
   .desktop-nav{gap:21px}.desktop-nav a{font-size:14px}
   .wordmark{font-size:27px}.wordmark-symbol{width:29px;height:29px;font-size:15px}
   .contact-pill{min-height:44px;padding:0 16px}
-  .hero-top{padding-top:180px}.hero h1{font-size:clamp(53px,6.2vw,72px)}
+  .hero{padding-top:110px}.hero h1{font-size:clamp(38px,4.4vw,48px)}
   .services-layout{gap:55px}.project-grid{column-gap:55px;row-gap:120px}.project-card:nth-child(even){margin-top:115px}
   .capability-list,.process-list{margin-left:25%}.section-split-heading{grid-template-columns:25% 1fr}
   .footer-grid{gap:25px}.footer-grid a{font-size:16px}
@@ -24,8 +24,8 @@
   .mobile-navigation>a{display:flex;align-items:center;justify-content:space-between;font-size:clamp(28px,5vw,48px);font-weight:700;letter-spacing:-.055em;padding:6px 0}
   .mobile-navigation>a span{font-size:.6em;font-weight:400;opacity:.5}
   .mobile-menu-bottom{display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:70px;font-size:18px}.mobile-menu-bottom p{font-size:13px;color:#989ba8;margin:35px 0 0}
-  .hero-top{padding-top:145px}.hero-kicker{font-size:11px;margin-bottom:32px}.hero h1{font-size:clamp(44px,7.6vw,66px)}
-  .hero-bottom{margin-top:58px;margin-bottom:85px}.hero-bottom p{font-size:18px;max-width:450px}.hero-bottom .text-link{white-space:nowrap;font-size:14px}
+  .hero{padding-block:115px 36px}.hero-layout{grid-template-columns:1fr;gap:38px}.hero-top{max-width:620px}.hero h1{font-size:clamp(38px,6vw,54px)}
+  .hero-bottom p{font-size:17px}
   .services-layout{grid-template-columns:1fr;gap:30px}.services-intro h2{font-size:clamp(42px,6vw,58px)}.services-intro p{font-size:22px}.services-list{padding:0}
   .clients-section{padding:50px 0 95px}.clients-heading{margin-bottom:44px}.clients-heading p{width:65%}.clients-grid{grid-template-columns:repeat(3,1fr)}.client-logo{height:110px}
   .work-section{padding-top:70px}.work-heading{margin-bottom:70px}.work-heading h2{font-size:clamp(55px,8vw,90px)}.work-heading p{font-size:19px}
@@ -39,11 +39,9 @@
 @media(max-width:600px){
   :root{--gutter:24px}
   .section{padding-block:78px}.eyebrow{font-size:11px}
-  .hero{padding-bottom:0;display:flex;flex-direction:column}.hero-top{display:contents}.hero-kicker{display:none}
-  .hero h1{font-size:clamp(39px,10vw,56px);line-height:1.09;letter-spacing:-.065em;max-width:520px;order:0;margin:132px var(--gutter) 72px}
-  .hero h1 br{display:none}
-  .hero-bottom{display:block;order:2;margin:58px var(--gutter) 65px}.hero-bottom p{font-size:16px;line-height:1.55}.hero-bottom .text-link{margin-top:25px}
-  .hero>.shell:last-child{width:100%;order:1}.hero-art{aspect-ratio:1.05}.hero-disc{left:21%;top:10%;width:83%;height:85%}.hero-art-caption{font-size:8px}.sphere-one{width:11%;left:15%}.sphere-two{width:6%;right:11%}
+  .hero{padding-top:112px}.hero-kicker{margin-bottom:20px}
+  .hero h1{font-size:clamp(32px,8.7vw,48px);line-height:1.15;letter-spacing:-.05em}
+  .hero-bottom{margin-top:20px;gap:24px}.hero-bottom p{font-size:16px;line-height:1.6}.hero .contact-pill{min-height:48px}.hero-actions{gap:18px}
   .services-section{padding-bottom:45px}.services-intro h2,.section-split-heading h2,.technology-layout h2,.industries-layout h2{font-size:clamp(35px,9vw,48px);line-height:1.14;margin:18px 0 22px}
   .services-intro h2 br,.section-split-heading h2 br,.technology-layout h2 br,.industries-layout h2 br{display:none}
   .services-intro p{font-size:18px;line-height:1.55;margin-bottom:30px}.services-list{margin-top:15px}.services-list summary{font-size:19px;padding:17px 0;gap:12px}.services-list .service-number{font-size:11px;min-width:23px}.services-list details p{font-size:15px;margin:0 20px 21px 35px}
@@ -51,7 +49,7 @@
   .work-heading{margin-bottom:50px}.work-heading h2{font-size:clamp(46px,11vw,62px);line-height:1.08;margin:20px 0}.work-heading p{font-size:17px;margin:25px 0 0;max-width:320px}
   .project-grid{display:block}.project-card,.project-card:nth-child(even),.project-card:nth-child(3),.project-card:nth-child(6),.project-card:nth-child(4),.project-card:nth-child(5){margin:0 0 72px}
   .project-card:last-child{margin-bottom:0}.project-art,.project-card:nth-child(3) .project-art,.project-card:nth-child(6) .project-art{aspect-ratio:1.04}
-  .project-title-row h3{font-size:23px}.project-information>p{font-size:16px}.project-industry{font-size:10px}.project-services{font-size:12px}.project-story p{font-size:15px}
+  .project-title-row :is(h2,h3){font-size:23px}.project-information>p{font-size:16px}.project-industry{font-size:10px}.project-services{font-size:12px}.project-story p{font-size:15px}
   .company-section{margin-top:0;padding:90px 0}.company-statement h2{font-size:clamp(39px,9vw,55px);line-height:1.17;margin:45px 0}.company-statement h2 br{display:none}.company-copy{margin-left:0}.company-copy p{font-size:18px}.stats-row{margin-top:75px;gap:20px}.stats-row strong{font-size:47px}.stats-row span{font-size:11px}
   .section-split-heading{margin-bottom:35px}.capability-list>div{grid-template-columns:30px 1fr;gap:10px;padding:21px 0}.capability-list h3{font-size:22px}.capability-list p{grid-column:2;font-size:15px}
   .technology-section{padding:85px 0}.technology-layout{gap:25px}.technology-layout p{font-size:16px}.technology-list{gap:0 13px}.technology-list span{font-size:23px}
@@ -63,7 +61,7 @@
   .footer-grid{grid-template-columns:1fr 1fr;gap:55px 20px;padding:42px 0 75px}.footer-grid a,.footer-grid p{font-size:15px}.footer-label{font-size:10px}.footer-bottom{align-items:start;flex-direction:column;font-size:11px}
   .santara-frame{inset:14% 4% 12%}.santara-copy strong{font-size:clamp(22px,7vw,34px)}.arunika-frame{inset:13% -16% 10% 5%}.dashboard-side strong{font-size:12px}.finance-balance strong{font-size:17px}.logistik-title{font-size:37px}.edu-window,.medika-window{inset:15% 5%}.edu-main strong{font-size:27px}.edu-shape span{font-size:100px}.medika-body h3{font-size:27px}.agri-type{font-size:36px}.agri-phone{width:41%;right:10%;height:75%;top:18%}.agri-phone-inner>strong{font-size:16px}
 }
-@media(max-width:380px){:root{--gutter:18px}.hero h1{font-size:38px}.client-logo{font-size:11px}.stats-row{gap:8px}.footer-email{font-size:25px}}
+@media(max-width:380px){:root{--gutter:18px}.client-logo{font-size:11px}.stats-row{gap:8px}.footer-email{font-size:25px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.project-card,.company-statement h2,.article-row{animation:none!important}}
-@media(max-width:800px){.hero-bottom{align-items:start}.hero-actions{justify-content:start}.footer{padding-top:0}.footer-intro{padding-top:100px}}
-@media(max-width:600px){.hero h1{font-size:clamp(40px,10.5vw,56px);line-height:1.05;margin-bottom:55px}.hero-actions{gap:24px;margin-top:28px}.hero-actions .text-link{margin-top:0}.hero-bottom{margin-top:45px}.footer{padding-top:0}.footer-intro{padding:90px var(--gutter);margin-bottom:65px}.footer-intro h2{font-size:clamp(48px,12vw,72px)}.footer-wordmark{font-size:clamp(64px,16vw,90px);margin-bottom:35px}}
+@media(max-width:800px){.footer{padding-top:65px}}
+@media(max-width:600px){.footer{padding-top:55px}.footer-wordmark{font-size:clamp(64px,16vw,90px);margin-bottom:35px}}

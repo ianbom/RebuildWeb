@@ -1,0 +1,1070 @@
+# ROLE & OBJECTIVE
+
+Act as a Senior Frontend Engineer, Senior UI/UX Designer, Product Designer, and Conversion Rate Optimization Specialist.
+
+Your task is to DESIGN AND IMPLEMENT a complete, production-ready **Services & Pricing Page** for an Indonesian digital agency called **TemuWeb**.
+
+TemuWeb is a software house and web development agency offering professional website development and custom digital solutions for Indonesian businesses.
+
+**IMPORTANT: This is an IMPLEMENTATION task, not a planning or design suggestion task. You must directly modify the existing codebase and deliver a fully functional page.**
+
+Do not stop at wireframes, explanations, or implementation plans.
+
+---
+
+# 1. PROJECT ANALYSIS
+
+Before writing code:
+
+1. Inspect the existing repository structure.
+2. Identify the framework, routing system, styling approach, component architecture, and installed dependencies.
+3. Inspect the existing TemuWeb homepage carefully.
+4. Identify existing reusable components such as Navbar, Footer, Buttons, Containers, and Section Headings.
+5. Identify the current typography, colors, spacing, border radius, shadows, and responsive breakpoints.
+6. Understand how the existing WhatsApp consultation button works.
+7. Inspect existing navigation and pricing sections.
+
+Use the existing technology stack and architecture.
+
+If the project uses Next.js, TypeScript, and Tailwind CSS, continue with those technologies.
+
+Do not migrate frameworks or introduce unnecessary dependencies.
+
+**CRITICAL: The Services page must look like a natural extension of the current TemuWeb homepage, not a separate website with an unrelated design.**
+
+---
+
+# 2. DESIGN DIRECTION
+
+Create a premium, clean, visually sophisticated Services & Pricing page inspired by high-end digital agencies.
+
+The desired visual characteristics:
+
+- Modern digital agency aesthetic.
+- Premium SaaS-style pricing design.
+- Minimalist and professional.
+- Spacious, beautiful whitespace.
+- Strong visual hierarchy.
+- Large editorial typography.
+- Refined cards with thin borders.
+- Subtle shadows and elegant hover effects.
+- Sophisticated layouts and consistent spacing.
+- Soft blue-tinted backgrounds.
+- Professional interface and website mockup illustrations.
+- Smooth scrolling and subtle animations.
+- Excellent responsiveness.
+
+## Brand colors
+
+Preserve existing project colors where already defined. Use these as guidance:
+
+- Primary Blue: `#2854F5`
+- Deep Blue: `#1742CC`
+- Light Blue: `#E9EEFF`
+- White: `#FFFFFF`
+- Text: `#141414`
+- Secondary Text: `#666B7A`
+- Orange Accent: `#FF714A`
+
+Use blue for primary CTAs, interactive states, and highlights.
+
+Use orange sparingly for small accents and directional icons.
+
+Avoid excessive gradients and generic colorful SaaS designs.
+
+## Typography
+
+Reuse the existing website fonts.
+
+Headlines should have a bold editorial appearance, with selective blue italic emphasis matching the existing TemuWeb hero section.
+
+## Layout
+
+Use a professional desktop layout with an appropriate maximum content width and generous horizontal padding.
+
+Maintain consistent alignment between every section.
+
+The page must feel carefully art-directed, not like a collection of unrelated template components.
+
+---
+
+# 3. PAGE ROUTING
+
+Create the page at:
+
+`/layanan`
+
+Ensure the existing navbar's "Layanan" menu navigates correctly to this page.
+
+Preserve all other existing routes and navigation behavior.
+
+Make the category selection shareable through query parameters, such as:
+
+`/layanan?kategori=ecommerce`
+
+If possible, synchronize the selected category with the URL without unnecessary full-page reloads.
+
+---
+
+# 4. PAGE STRUCTURE
+
+Implement the following sections in this exact sequence:
+
+1. Services Hero Section
+2. Service Category Navigation
+3. Service Catalog Grid
+4. Pricing Packages Section
+5. Package Feature Comparison
+6. Additional Services / Add-ons
+7. Our Working Process
+8. Frequently Asked Questions
+9. Final Consultation CTA
+10. Existing Footer
+
+Each section must be beautifully designed and responsive.
+
+---
+
+# 5. HERO SECTION
+
+Create a premium hero section consistent with the existing TemuWeb homepage.
+
+Small eyebrow text:
+
+`SOLUSI DIGITAL TEMUWEB`
+
+Main headline:
+
+`Solusi digital untuk setiap kebutuhan bisnis.`
+
+Apply blue italic emphasis to:
+
+`setiap kebutuhan bisnis.`
+
+Description:
+
+`Dari landing page sederhana hingga aplikasi web custom, kami membantu bisnis Anda tumbuh melalui solusi digital yang profesional, modern, dan sesuai kebutuhan.`
+
+Primary CTA:
+
+`Konsultasi Gratis ↗`
+
+Secondary CTA:
+
+`Jelajahi Layanan ↓`
+
+The primary CTA should use the existing consultation behavior.
+
+The secondary CTA should smoothly scroll to the service categories.
+
+## Hero visual
+
+Create a premium visual composition on the right side featuring layered website interface mockups.
+
+Include:
+
+- Desktop website browser mockup.
+- Floating mobile website mockup.
+- Small e-commerce UI preview.
+- Minimal dashboard interface preview.
+- Soft shadows and dimensional depth.
+- Small blue and orange decorative accents.
+
+The artwork should convey professional website development.
+
+Avoid random generic illustrations and human characters.
+
+Use existing project visual assets if suitable. If assets are unavailable, create the visual with HTML/CSS components or suitable locally managed assets.
+
+Do not introduce broken external image dependencies.
+
+---
+
+# 6. SERVICE CATEGORY NAVIGATION
+
+Create a horizontal filter navigation with these categories:
+
+- Semua Layanan
+- Landing Page
+- Company Profile
+- E-Commerce
+- Katalog Produk
+- Booking & Reservasi
+- Custom Web App
+- Maintenance
+
+Design:
+
+- Rounded pill-style buttons.
+- Active category uses solid primary blue.
+- Inactive categories use white or light backgrounds.
+- Thin borders.
+- Smooth hover and active transitions.
+- Horizontal scrolling on small screens.
+- Clear selected state.
+
+This navigation must be FUNCTIONAL.
+
+When users choose a category:
+
+1. Update the active category.
+2. Filter the service cards or focus on the selected service.
+3. Update the selected pricing content when applicable.
+4. Synchronize the selection with the URL query parameter.
+5. Preserve accessible keyboard interaction.
+
+---
+
+# 7. SERVICE CATALOG GRID
+
+Create premium service cards for seven categories.
+
+On desktop, use an attractive responsive grid that balances content density and whitespace.
+
+Use three columns where appropriate, two columns on tablets, and one column on mobile.
+
+Each card should feature:
+
+- Premium visual preview or website mockup.
+- Service category.
+- Service title.
+- Short description.
+- Suitable use cases.
+- Starting price.
+- CTA: `Lihat Detail Paket ↗`
+- Elegant hover animation.
+
+Do not make all visual previews identical.
+
+## SERVICE DATA
+
+### 1. Landing Page
+
+Description:
+
+`Website satu halaman yang dirancang untuk memperkenalkan produk, meningkatkan konversi, dan mendukung kampanye pemasaran digital.`
+
+Suitable for:
+
+- Promosi produk
+- Personal branding
+- Campaign marketing
+- Event
+- Bisnis baru
+
+Starting price: Rp1.500.000
+
+### 2. Company Profile
+
+Description:
+
+`Website profesional yang membangun kredibilitas perusahaan dan memperkenalkan bisnis Anda kepada calon pelanggan.`
+
+Suitable for:
+
+- Perusahaan
+- UMKM
+- Konsultan
+- Agency
+- Bisnis profesional
+
+Starting price: Rp3.000.000
+
+### 3. E-Commerce
+
+Description:
+
+`Toko online modern dengan pengelolaan produk, keranjang belanja, checkout, dan fitur penjualan sesuai kebutuhan bisnis.`
+
+Suitable for:
+
+- Brand lokal
+- Retail
+- Fashion
+- Produk digital
+- Bisnis online
+
+Starting price: Rp6.500.000
+
+### 4. Katalog Produk
+
+Description:
+
+`Website katalog digital untuk menampilkan produk secara profesional tanpa sistem checkout online yang kompleks.`
+
+Suitable for:
+
+- Distributor
+- Supplier
+- Showroom
+- Grosir
+- UMKM
+
+Starting price: Rp3.500.000
+
+### 5. Booking & Reservasi
+
+Description:
+
+`Website reservasi yang membantu pelanggan melakukan pemesanan layanan dan mengatur jadwal secara lebih praktis.`
+
+Suitable for:
+
+- Salon
+- Klinik
+- Rental
+- Konsultan
+- Penginapan
+
+Starting price: Rp5.000.000
+
+### 6. Custom Web Application
+
+Description:
+
+`Pengembangan aplikasi berbasis web yang disesuaikan dengan proses bisnis, operasional, dan kebutuhan perusahaan Anda.`
+
+Suitable for:
+
+- Sistem ERP
+- CRM
+- LMS
+- Dashboard internal
+- Sistem manajemen
+
+Starting price: Rp15.000.000
+
+### 7. Website Maintenance
+
+Description:
+
+`Layanan pemeliharaan website untuk membantu menjaga keamanan, stabilitas, performa, dan kelancaran operasional.`
+
+Suitable for:
+
+- Website perusahaan
+- Toko online
+- Aplikasi web
+- Website bisnis
+
+Starting price: Rp350.000/bulan
+
+---
+
+# 8. PRICING PACKAGES SECTION
+
+This is ONE OF THE MOST IMPORTANT SECTIONS.
+
+Design a polished pricing section inspired by premium SaaS websites.
+
+Section eyebrow:
+
+`HARGA TRANSPARAN`
+
+Headline:
+
+`Pilih paket yang sesuai dengan bisnis Anda.`
+
+Description:
+
+`Setiap bisnis memiliki kebutuhan berbeda. Temukan paket yang tepat atau konsultasikan kebutuhan khusus Anda bersama tim TemuWeb.`
+
+## Pricing interaction
+
+Add category tabs:
+
+- Landing Page
+- Company Profile
+- E-Commerce
+- Katalog Produk
+- Booking
+- Custom Web App
+- Maintenance
+
+When a category is selected, pricing content must update dynamically.
+
+Use reusable pricing components driven by centralized data.
+
+## A. LANDING PAGE PRICING
+
+### Starter — Rp1.500.000
+
+For small businesses getting started.
+
+Features:
+
+- Up to 5 sections
+- Semi-custom design
+- Responsive desktop/mobile
+- WhatsApp integration
+- Basic SEO
+- Contact information
+- 1 design revision
+
+### Professional — Rp2.800.000
+
+For professional promotions and marketing.
+
+Features:
+
+- Up to 8 sections
+- Custom design
+- Responsive design
+- WhatsApp integration
+- Basic SEO
+- Contact form
+- Basic analytics integration
+- 2 design revisions
+
+### Premium — Rp4.500.000
+
+For advanced marketing campaigns.
+
+Features:
+
+- Up to 12 sections
+- Premium custom design
+- Responsive design
+- WhatsApp integration
+- Basic SEO
+- Contact form
+- Analytics integration
+- Custom animations
+- 3 design revisions
+
+Mark Professional as:
+
+`PALING POPULER`
+
+## B. COMPANY PROFILE PRICING
+
+### Starter — Rp3.000.000
+
+Features:
+
+- Up to 3 pages
+- Semi-custom design
+- Responsive design
+- Company information
+- Portfolio section
+- Contact page
+- Basic SEO
+- 1 design revision
+
+### Professional — Rp5.500.000
+
+Features:
+
+- Up to 6 pages
+- Custom design
+- Responsive design
+- Portfolio management
+- CMS / admin panel
+- Blog or news section
+- Basic SEO
+- 2 design revisions
+
+Mark Professional as the recommended package.
+
+### Premium — Rp9.500.000
+
+Features:
+
+- Up to 12 pages
+- Premium custom design
+- Responsive design
+- CMS / admin panel
+- Blog management
+- Portfolio management
+- Two-language support
+- SEO setup
+- 3 design revisions
+
+## C. E-COMMERCE PRICING
+
+### Starter — Rp6.500.000
+
+Features:
+
+- Product catalog
+- Product categories
+- Product detail pages
+- Shopping cart
+- Checkout via WhatsApp
+- Basic admin dashboard
+- Basic order management
+- Responsive design
+
+Payments and fulfillment are handled manually.
+
+### Professional — Rp12.500.000
+
+Features:
+
+- Complete product catalog
+- Product categories
+- Shopping cart
+- Website checkout
+- Payment gateway integration
+- Shipping cost API integration
+- Admin dashboard
+- Order management
+- Responsive design
+- Basic sales reporting
+
+Mark Professional as the recommended package.
+
+### Premium — Rp22.000.000
+
+Features:
+
+- Everything in Professional
+- Customer accounts
+- Customer dashboard
+- Voucher and discount system
+- Advanced product management
+- Extended sales reporting
+- Multiple admin roles
+- Custom business features within agreed scope
+
+Do not promise unlimited functionality.
+
+Clearly state that payment provider fees, shipping provider fees, and external service charges are excluded unless separately agreed.
+
+## D. OTHER SERVICE PRICING
+
+For the remaining four services, use beautiful dedicated pricing/detail panels rather than inventing full three-tier packages.
+
+### Katalog Produk
+
+Starting at Rp3.500.000
+
+Example starter scope:
+
+- Up to 30 initial product entries
+- Product categories
+- Product details
+- Inquiry via WhatsApp
+- Responsive interface
+- Simple product management
+
+### Booking & Reservasi
+
+Starting at Rp5.000.000
+
+Example starter scope:
+
+- Booking request form
+- Scheduling interface
+- Admin reservation management
+- Customer contact information
+- Basic admin notifications
+- Responsive design
+
+Do not imply live availability or automated payment unless those features are explicitly included.
+
+### Custom Web Application
+
+Starting at Rp15.000.000
+
+Example starter scope:
+
+- Requirements consultation
+- Custom web interface
+- Secure login
+- Role-based access
+- CRUD management
+- Basic dashboard
+- Database integration
+
+Include a CTA:
+
+`Diskusikan Proyek Anda ↗`
+
+Explain that final pricing depends on modules, integrations, workflows, and technical complexity.
+
+### Website Maintenance
+
+Starting at Rp350.000/month
+
+Example starter scope:
+
+- Website monitoring
+- Periodic backup
+- Minor updates
+- Basic bug fixes
+- Technical assistance
+
+Clearly distinguish maintenance from major redesign or new feature development.
+
+---
+
+# 9. PRICING CARD DESIGN
+
+Pricing cards must look expensive, polished, and trustworthy.
+
+Each card should include:
+
+- Package name
+- Short target-customer description
+- Large formatted Rupiah price
+- One-time or monthly payment indicator
+- Feature checklist
+- Primary CTA
+- Subtle border
+- Consistent internal spacing
+
+For three-tier packages:
+
+- Starter: neutral white card
+- Professional: highlighted card with primary-blue accent and "Paling Populer" label
+- Premium: refined white card
+
+The highlighted card should be visually prominent but NOT excessively colorful.
+
+Keep pricing cards equal height on desktop and align the CTA buttons consistently.
+
+Use appropriate responsive behavior without horizontal overflow.
+
+Buttons:
+
+`Pilih Paket ↗`
+
+When clicked, direct the user to the existing WhatsApp consultation flow and prefill a message containing the selected service and package.
+
+Example:
+
+`Halo TemuWeb, saya tertarik dengan layanan Landing Page paket Professional (Rp2.800.000). Saya ingin konsultasi mengenai kebutuhan website saya.`
+
+Use the existing WhatsApp phone number or configuration. Never invent a new phone number.
+
+---
+
+# 10. PACKAGE COMPARISON
+
+Below the pricing cards, provide an expandable comparison section:
+
+`Bandingkan Semua Fitur`
+
+On click, reveal a detailed feature comparison table for the selected three-tier service.
+
+Use checkmarks, dashes, and clear descriptions.
+
+Features must match the package data exactly.
+
+Do not introduce contradictions between pricing cards and comparison tables.
+
+Desktop:
+
+- Clean comparison table
+- Sticky feature labels if appropriate
+- Clearly marked recommended package
+
+Mobile:
+
+- Readable responsive layout
+- Horizontal scrolling with visual affordance or a stacked comparison interface
+
+Avoid inaccessible or unreadable tables.
+
+---
+
+# 11. ADDITIONAL SERVICES SECTION
+
+Section eyebrow:
+
+`LAYANAN TAMBAHAN`
+
+Headline:
+
+`Butuh fitur atau dukungan tambahan?`
+
+Create an elegant add-on grid or compact pricing list.
+
+Include:
+
+1. Additional standard page — Rp300.000–Rp600.000/halaman
+2. Simple CMS / Admin Panel — Mulai Rp2.000.000
+3. Website Copywriting — Mulai Rp500.000
+4. Multilingual Website — Mulai Rp1.500.000
+5. Advanced SEO Setup — Mulai Rp1.500.000
+6. Monthly SEO — Mulai Rp1.500.000/bulan
+7. Priority Maintenance — Mulai Rp1.200.000/bulan
+8. Custom API Integration — Harga sesuai kebutuhan
+
+Display prices clearly.
+
+Include a small disclaimer that add-ons are only charged separately when not already included in the chosen package.
+
+---
+
+# 12. WORKING PROCESS
+
+Create a visually engaging process section.
+
+Eyebrow:
+
+`CARA KAMI BEKERJA`
+
+Headline:
+
+`Dari ide menjadi website profesional.`
+
+Use a 5-step process:
+
+### 01 — Konsultasi
+
+Memahami kebutuhan, tujuan, dan karakter bisnis Anda.
+
+### 02 — Perencanaan
+
+Menentukan fitur, struktur website, serta ruang lingkup pengerjaan.
+
+### 03 — Desain & Development
+
+Membangun website dengan tampilan modern dan teknologi yang sesuai.
+
+### 04 — Review & Revisi
+
+Melakukan pengujian dan penyempurnaan berdasarkan paket yang dipilih.
+
+### 05 — Launching
+
+Mempublikasikan website dan memberikan panduan penggunaan.
+
+Design:
+
+- Elegant numbered step cards.
+- Subtle connecting lines on desktop.
+- Vertical timeline on mobile.
+- Small refined icons.
+- Consistent spacing.
+- Optional subtle scroll-triggered animations.
+
+Avoid excessive motion.
+
+---
+
+# 13. FAQ SECTION
+
+Create an accessible FAQ accordion with the following questions:
+
+1. Apakah harga sudah termasuk domain dan hosting?
+2. Berapa lama proses pembuatan website?
+3. Apakah website bisa dibuka melalui smartphone?
+4. Apakah saya bisa meminta desain custom?
+5. Apakah tersedia revisi desain?
+6. Apakah website memiliki dashboard admin?
+7. Apakah saya mendapatkan source code website?
+8. Apakah bisa menambahkan fitur setelah website selesai?
+9. Apakah TemuWeb menyediakan maintenance?
+10. Bagaimana sistem pembayaran proyek?
+
+Write professional, concise Indonesian answers.
+
+Important business rules:
+
+- Domain and hosting are excluded unless explicitly included in a written proposal.
+- Development timeline depends on complexity and agreed scope.
+- Revision counts follow the selected package.
+- CMS/admin access is included only in packages that specify it.
+- Source code ownership and handover must follow the project agreement; do not promise unconditional transfer.
+- Payment milestones and terms are agreed before project commencement.
+- Avoid inventing a universal refund policy, warranty duration, or delivery guarantee.
+
+Use a high-quality accordion with smooth interaction and proper accessibility attributes.
+
+---
+
+# 14. FINAL CTA SECTION
+
+Create a strong full-width conversion section near the bottom.
+
+Use a visually premium cobalt-blue background or another design consistent with the existing TemuWeb brand.
+
+Headline:
+
+`Punya ide website? Mari wujudkan bersama.`
+
+Description:
+
+`Ceritakan kebutuhan bisnis Anda, dan kami bantu menemukan solusi digital yang tepat.`
+
+Primary CTA:
+
+`Konsultasi Gratis ↗`
+
+Secondary CTA:
+
+`Lihat Portofolio ↗`
+
+Both buttons must work.
+
+Use actual existing destinations from the project.
+
+---
+
+# 15. INTERACTIONS & USER EXPERIENCE
+
+Implement real and useful interactions:
+
+1. Functional service-category filters.
+2. Dynamic pricing switching.
+3. URL query parameter synchronization.
+4. Smooth anchor navigation.
+5. Functional WhatsApp CTA.
+6. Prefilled WhatsApp messages based on selected packages.
+7. Expandable feature comparison.
+8. Functional FAQ accordion.
+9. Responsive mobile navigation.
+10. Visible button hover and focus states.
+
+Use lightweight motion where appropriate.
+
+Respect `prefers-reduced-motion`.
+
+Do not add decorative controls that do nothing.
+
+---
+
+# 16. RESPONSIVE DESIGN
+
+The page must be fully responsive.
+
+## Desktop
+
+- Spacious, balanced page sections.
+- Premium multi-column layouts.
+- Three pricing cards displayed side-by-side.
+- Beautiful hover effects.
+- Strong visual hierarchy.
+
+## Tablet
+
+- Adapt card grids appropriately.
+- Avoid cramped pricing.
+- Ensure navigation remains usable.
+
+## Mobile
+
+- Excellent layout at 320px–430px.
+- Service cards become single-column where appropriate.
+- Pricing cards stack vertically.
+- Category navigation supports horizontal scrolling.
+- Headings resize without awkward wrapping.
+- Buttons remain easy to tap.
+- Comparison features remain readable.
+- No horizontal page overflow.
+- No tiny text.
+- Hero visual scales or repositions appropriately.
+
+Mobile design must feel intentionally designed, not simply a compressed desktop layout.
+
+---
+
+# 17. COMPONENT ARCHITECTURE
+
+Use clean, maintainable, reusable components.
+
+Suggested structure, adapting to the existing project architecture:
+
+- ServicesHero
+- ServiceCategoryTabs
+- ServiceCatalog
+- ServiceCard
+- PricingSection
+- PricingTabs
+- PricingCard
+- PricingComparison
+- ServiceAddonSection
+- WorkProcessSection
+- ServicesFAQ
+- ServicesFinalCTA
+
+Centralize service and pricing data in a typed configuration module.
+
+Example conceptual structure:
+
+`src/data/services.ts`
+
+Do not scatter repeated pricing values across numerous components.
+
+Define reusable data types for:
+
+- Service category
+- Service package
+- Package price
+- Feature list
+- Add-on
+- FAQ item
+
+Ensure card displays, comparisons, and WhatsApp messages use the same underlying pricing data.
+
+Follow the existing repository conventions rather than blindly creating a new directory structure.
+
+---
+
+# 18. SEO OPTIMIZATION
+
+Optimize the page for relevant Indonesian keywords such as:
+
+- Jasa Pembuatan Website
+- Jasa Website Profesional
+- Jasa Landing Page
+- Jasa Website Company Profile
+- Jasa Pembuatan Toko Online
+- Jasa Website Surabaya
+
+Suggested title:
+
+`Layanan & Harga Jasa Pembuatan Website | TemuWeb`
+
+Suggested meta description:
+
+`Temukan layanan pembuatan website profesional dari TemuWeb. Landing page, company profile, toko online, hingga aplikasi web custom dengan pilihan paket sesuai kebutuhan bisnis.`
+
+Implement:
+
+- Proper HTML semantic structure.
+- A single H1.
+- Clear H2/H3 hierarchy.
+- Metadata using the existing framework conventions.
+- Descriptive image alt text.
+- Canonical URL according to the project's existing base URL configuration.
+- Appropriate internal links.
+
+If implementing structured data, ensure it accurately represents visible services and prices.
+
+Do not add fake aggregate ratings or fabricated reviews.
+
+---
+
+# 19. PERFORMANCE & ACCESSIBILITY
+
+Optimize for:
+
+- Fast loading.
+- Minimal layout shift.
+- Efficient image usage.
+- Semantic markup.
+- Accessible interactive components.
+- Keyboard navigation.
+- Appropriate focus indicators.
+- Sufficient contrast.
+- Good mobile touch targets.
+- Reduced-motion support.
+
+Reuse installed libraries where possible.
+
+Do not add unnecessary heavy animation frameworks.
+
+Avoid remote assets that introduce loading failures.
+
+---
+
+# 20. CONTENT QUALITY
+
+All public-facing text must be in natural, professional Indonesian.
+
+The writing style should feel:
+
+- Confident
+- Professional
+- Clear
+- Modern
+- Customer-focused
+- Easy for Indonesian business owners to understand
+
+Avoid exaggerated sales claims.
+
+Avoid generic filler such as:
+
+"Lorem ipsum"
+
+Avoid fabricated:
+
+- Customer testimonials
+- Client logos
+- Project counts
+- Performance guarantees
+- Awards
+- Discount promotions
+
+Use existing real portfolio content if appropriate and available.
+
+Do not fabricate business facts.
+
+---
+
+# 21. EXISTING PROJECT SAFETY
+
+IMPORTANT:
+
+- Do not redesign the homepage.
+- Do not unnecessarily modify unrelated pages.
+- Do not break the existing Navbar or Footer.
+- Preserve the existing TemuWeb branding.
+- Preserve all working routes.
+- Reuse existing design tokens.
+- Do not overwrite unrelated components.
+- Do not create duplicate global styles.
+- Do not introduce unneeded libraries.
+
+Modify shared components only when needed to integrate the Services page.
+
+---
+
+# 22. IMPLEMENTATION & VERIFICATION
+
+Complete the implementation in the repository.
+
+After implementation:
+
+1. Run the project's available lint checks.
+2. Run TypeScript checks if applicable.
+3. Run a production build.
+4. Fix errors introduced by your changes.
+5. Verify the `/layanan` route.
+6. Verify category switching.
+7. Verify pricing consistency.
+8. Verify mobile layout.
+9. Verify navigation and WhatsApp buttons.
+10. Verify FAQ and comparison interactions.
+
+If browser preview or screenshot tools are available, visually inspect desktop and mobile layouts and fix any obvious spacing, overflow, or alignment issues.
+
+Do not claim tests passed unless they actually ran successfully.
+
+---
+
+# 23. FINAL SUCCESS CRITERIA
+
+The task is complete only when:
+
+- A functional `/layanan` page exists.
+- The UI is visually consistent with TemuWeb.
+- All seven service categories are visible.
+- Service prices are displayed correctly.
+- Landing Page, Company Profile, and E-Commerce have three pricing tiers.
+- Other services have accurate starting-price detail panels.
+- Pricing tabs work.
+- Service filtering works.
+- WhatsApp consultation works using actual project configuration.
+- Add-on pricing is available.
+- Working process is implemented.
+- FAQ is functional.
+- The layout is fully responsive.
+- No unrelated existing functionality is broken.
+- The project builds successfully, or any pre-existing blockers are clearly documented.
+
+**IMPORTANT FINAL INSTRUCTION:**
+
+You have full responsibility for turning this specification into an elegant, functional, production-quality TemuWeb Services & Pricing page.
+
+Do not merely summarize what should be built.
+
+Inspect the codebase, implement the page, test it, and refine the UI.
+
+Prioritize visual quality, usability, conversion, maintainable code, and consistency with the existing TemuWeb website.
+
+Begin implementation now.
