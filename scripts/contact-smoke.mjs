@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+
+const origin = process.env.SITE_URL ?? "http://localhost:3000";
+const response = await fetch(new URL("/kontak", origin));
+assert.equal(response.status, 200);
+const html = (await response.text()).replaceAll("<!-- -->", "");
+assert.equal([...html.matchAll(/<h1\b/g)].length, 1);
+assert.match(html, /Mari bicarakan/);
+assert.match(html, /Surabaya, Jawa Timur, Indonesia/);
+assert.match(html, /bukan titik kantor/);
+assert.match(html, /Pesan tidak sampai ke TemuWeb/);
+assert.match(html, /id="contact-name"[^>]*required=""/);
+assert.match(html, /id="contact-message"[^>]*required=""/);
+assert.match(html, /Kirim ke WhatsApp/);
+assert.match(html, /Tekan Kirim di WhatsApp/);
+assert.match(html, /rel="canonical" href="https:\/\/temuweb.id\/kontak"/);
+const map = new URL(html.match(/<iframe src="([^"]+)"/)?.[1].replaceAll("&amp;", "&"));
+assert.equal(map.hostname, "www.google.com");
+assert.equal(map.searchParams.get("q"), "Surabaya, Jawa Timur, Indonesia");
+assert.equal(map.searchParams.get("output"), "embed");
+const sitemap = await (await fetch(new URL("/sitemap.xml", origin))).text();
+assert.ok(sitemap.includes("<loc>https://temuweb.id/kontak</loc>"));
+console.log("Contact route, required fields, demo disclosure, map, metadata, sitemap passed.");

@@ -3,6 +3,8 @@
 
 .project-art-link{display:block}
 .work-all-link{margin-top:70px}
+.contact-pill.section-action{display:inline-flex;margin-top:48px;border-radius:8px}
+.contact-pill.work-all-link{margin-top:70px}
 .project-information>.text-link{margin-top:24px}
 
 :root{--color-brand-blue:#2457f5;--color-brand-blue-dark:#1739b8;--color-brand-blue-light:#eaf0ff;--color-brand-orange:#ff6b35;--color-brand-orange-dark:#e95420;--color-brand-orange-light:#fff0ea;--ink:#111216;--muted:#5f6470;--paper:#fff;--soft:#f6f6f1;--night:#111216;--border:#dfe2e7;--surface-muted:#efefed;--gutter:clamp(24px,5vw,76px);--ease:cubic-bezier(.16,1,.3,1)}

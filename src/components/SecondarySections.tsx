@@ -148,6 +148,12 @@ export function Pricing() {
             </article>
           ))}
         </div>
+        <Link className="contact-pill section-action" href="/layanan">
+          Lihat Semua Layanan
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </Link>
       </div>
     </section>
   );

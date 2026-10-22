@@ -16,6 +16,8 @@ for path in ["/", "/portofolio", *[f"/portofolio/{slug}" for slug in slugs]]:
         if path == "/portofolio":
             assert js("document.querySelectorAll('.project-card h2').length === 6", target_id=target)
         if path == "/":
+            assert js("document.querySelectorAll('#work .project-card').length === 3", target_id=target)
+            assert js("document.querySelector('#pricing .section-action').getAttribute('href') === '/layanan'", target_id=target)
             assert js("document.querySelector('.hero').getBoundingClientRect().height >= innerHeight", target_id=target), f"Hero too short at {width}px"
             assert js("document.querySelector('.hero').nextElementSibling.getBoundingClientRect().top >= innerHeight", target_id=target), f"Next section visible at {width}px"
             assert js("document.querySelector('.floating-contact svg') && document.querySelector('.floating-contact').textContent.trim() === ''", target_id=target)
@@ -56,7 +58,7 @@ def wait_location(path, fragment=""):
         time.sleep(.2)
     raise AssertionError(f"Navigation failed: {path}{fragment}")
 
-click_node(find_node("link", "Lihat semua portofolio"))
+click_node(find_node("link", "Lihat Semua Portofolio"))
 wait_location("/portofolio")
 assert js("document.querySelectorAll('.project-card').length === 6", target_id=target)
 click_node(find_node("link", "Lihat konsep Santara Commerce"))

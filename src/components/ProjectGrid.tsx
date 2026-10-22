@@ -4,13 +4,15 @@ import { site } from "@/data/site";
 
 export function ProjectGrid({
   headingLevel = "h3",
+  limit,
 }: {
   headingLevel?: "h2" | "h3";
+  limit?: number;
 }) {
   const Heading = headingLevel;
   return (
     <div className="project-grid">
-      {site.projects.map((project, index) => (
+      {site.projects.slice(0, limit).map((project, index) => (
         <article
           className={`project-card project-${index + 1}`}
           key={project.slug}

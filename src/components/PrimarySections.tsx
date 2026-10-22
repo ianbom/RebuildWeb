@@ -1,6 +1,6 @@
 import { ProjectGrid } from "./ProjectGrid";
 import Link from "next/link";
-import { site } from "@/data/site";
+import { services } from "@/data/services";
 import Image from "next/image";
 import heroImage from "../../public/hero.png";
 
@@ -83,10 +83,10 @@ export function Services() {
           </a>
         </div>
         <div className="services-list">
-          {site.services.map((service, index) => (
+          {services.map((service, index) => (
             <details
               name="services"
-              key={service.name}
+              key={service.id}
               open={index === 0 ? true : undefined}
             >
               <summary>
@@ -128,13 +128,16 @@ export function Work() {
             </span>
           </h2>
           <p>
-            {site.projects.length} konsep ilustrasi untuk menunjukkan jenis produk yang bisa kami
+            Pilihan konsep ilustrasi untuk menunjukkan jenis produk yang bisa kami
             bangun. Bukan hasil pekerjaan atau testimoni klien.
           </p>
         </div>
-        <ProjectGrid />
-        <Link className="text-link work-all-link" href="/portofolio">
-          Lihat semua portofolio
+        <ProjectGrid limit={3} />
+        <Link
+          className="contact-pill section-action work-all-link"
+          href="/portofolio"
+        >
+          Lihat Semua Portofolio
           <span aria-hidden="true">
             ↗
           </span>

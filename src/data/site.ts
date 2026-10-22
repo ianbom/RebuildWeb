@@ -39,11 +39,11 @@ export const site = {
   location: "Surabaya, Indonesia",
   origin: "https://temuweb.id",
   navigation: [
+    { label: "Beranda", href: "/" },
     { label: "Portofolio", href: "/portofolio" },
     { label: "Artikel", href: "/artikel" },
-    { label: "Layanan", href: "/#services" },
-    { label: "Harga", href: "/#pricing" },
-    { label: "Proses", href: "/#process" },
+    { label: "Layanan", href: "/layanan" },
+    { label: "Kontak", href: "/kontak" },
   ],
   trust: ["Dibangun sesuai kebutuhan", "Tampilan responsif", "Dukungan setelah rilis"],
   problems: [
@@ -107,14 +107,6 @@ export const site = {
       ],
     },
   ] satisfies PricingPackage[],
-  services: [
-    { name: "Pembuatan Website", description: "Kami membuat website profil perusahaan, halaman promosi, dan platform web yang cepat, mudah diakses, ramah mesin pencari, dan nyaman dipakai." },
-    { name: "Aplikasi Web Khusus", description: "Dasbor, keanggotaan, pemesanan, LMS, stok barang, CRM, dan sistem internal yang mengikuti alur bisnis Anda." },
-    { name: "Desain UI/UX & Produk", description: "Kami meriset kebutuhan, menyusun alur, membuat sketsa dan prototipe, lalu merancang tampilan yang mudah dipahami dan dipakai." },
-    { name: "Pembuatan Toko Online", description: "Toko online yang menghubungkan katalog, pembayaran, stok, dan operasional agar pengalaman belanja terasa mudah." },
-    { name: "Integrasi API & Sistem", description: "Kami menghubungkan layanan pembayaran, ERP, CRM, WhatsApp, dan layanan lain dengan API yang aman dan siap berkembang." },
-    { name: "AI & Otomatisasi", description: "Pemanfaatan AI dan otomatisasi untuk pencarian, chatbot, pengolahan dokumen, dan alur kerja yang benar-benar membantu bisnis." },
-  ],
   projects: [
     { slug: "santara-commerce", name: "Santara Commerce", headline: "Platform belanja yang siap tumbuh bersama jaringan ritel", services: ["Pembuatan Web", "Toko Online", "UI/UX", "Integrasi API"], industry: "Ritel", theme: "santara", narrative: "Satu pengalaman belanja yang menyatukan katalog, promosi, dan pesanan di seluruh kanal ritel.", scope: "Pengalaman belanja, desain toko online, susunan produk, dan operasional yang saling terhubung.", challenge: "Saat katalog, promosi, dan pesanan terpisah, pelanggan sulit menemukan produk dan tim harus mengecek banyak tempat.", solution: "Konsep ini menyatukan pencarian produk dan alur belanja dalam satu toko online, dengan pengelolaan pesanan yang lebih terarah.", features: ["Katalog dengan kategori dan pencarian", "Keranjang dan ringkasan pesanan", "Pilihan pengiriman dalam alur belanja", "Pengelolaan produk dan pesanan"] },
     { slug: "arunika-finance", name: "Arunika Finance", headline: "Operasional keuangan yang rumit jadi lebih mudah dipahami", services: ["Desain Produk", "Aplikasi Web", "Dasbor", "Pengembangan"], industry: "Fintech", theme: "arunika", narrative: "Ruang kerja finansial yang menyederhanakan informasi kompleks menjadi keputusan yang lebih jelas.", scope: "Susunan informasi, sistem dasbor, dan antarmuka produk finansial.", challenge: "Data keuangan yang tersebar membuat tim sulit melihat kondisi bisnis dan menelusuri transaksi.", solution: "Konsep ini menempatkan ringkasan keuangan, transaksi, dan laporan dalam ruang kerja yang mudah dibaca.", features: ["Ringkasan pemasukan dan pengeluaran", "Daftar transaksi dengan filter", "Laporan sesuai periode", "Hak akses sesuai peran tim"] },

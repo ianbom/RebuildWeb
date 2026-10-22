@@ -1,4 +1,5 @@
 import { site, whatsappUrl } from "@/data/site";
+import { services } from "@/data/services";
 import Link from "next/link";
 
 export function Footer() {
@@ -58,17 +59,17 @@ export function Footer() {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/#contact">
-                Kontak
-              </Link>
             </div>
             <div>
               <span className="footer-label">
                 Layanan
               </span>
-              {site.services.map((item) => (
-                <Link key={item.name} href="/#services">
-                  {item.name}
+              {services.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/layanan?kategori=${item.id}#paket-layanan`}
+                >
+                  {item.id === "landing-page" ? "Landingpage" : item.tab}
                 </Link>
               ))}
             </div>

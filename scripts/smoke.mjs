@@ -5,6 +5,15 @@ const page = await fetch(origin);
 assert.equal(page.status, 200);
 const html = (await page.text()).replaceAll("<!-- -->", "");
 assert.match(html, /TemuWeb/);
+const homepageServices = html.match(/<section id="services"[\s\S]*?<\/section>/)?.[0].replaceAll("&amp;", "&");
+assert.ok(homepageServices, "Homepage services section is missing");
+assert.equal([...homepageServices.matchAll(/<details /g)].length, 7);
+let previousServiceIndex = -1;
+for (const name of ["Landing Page", "Company Profile", "E-Commerce", "Katalog Produk", "Booking & Reservasi", "Custom Web Application", "Website Maintenance"]) {
+  const serviceIndex = homepageServices.indexOf(`<span>${name}</span>`);
+  assert.ok(serviceIndex > previousServiceIndex, `${name} is missing or out of order in homepage services`);
+  previousServiceIndex = serviceIndex;
+}
 assert.match(html, /hello@temuweb\.id/);
 assert.doesNotMatch(html, /Nexora/i);
 assert.match(html, /Bangun bisnis dengan/);
@@ -41,24 +50,31 @@ for (const feature of ["Bantuan upload hingga 10 produk pertama", "Dashboard unt
 assert.doesNotMatch(pricingCards[0], /Dashboard untuk mengelola konten website|Bantuan upload/);
 assert.match(html, /Biaya perpanjangan setelah tahun pertama tidak termasuk harga awal/);
 assert.doesNotMatch(html, /What is|BUILD|RETHINK|View appointments|Main navigation/);
-for (const name of ["Santara Commerce", "Arunika Finance", "LogistikKu", "EduSpace", "MedikaPlus", "AgriLink"]) {
+for (const name of ["Santara Commerce", "Arunika Finance", "LogistikKu"]) {
   assert.ok(html.includes(name), `${name} is missing`);
 }
-const projectPaths = [...new Set([...html.matchAll(/href="(\/portofolio\/[^"#]+)"/g)].map((match) => match[1]))];
-assert.equal(projectPaths.length, 6, "Each concept must link to a detail page");
+const homepagePaths = [...new Set([...html.matchAll(/href="(\/portofolio\/[^"#]+)"/g)].map((match) => match[1]))];
+assert.equal(homepagePaths.length, 3, "Homepage must link to three concept detail pages");
 const sitemap = await (await fetch(new URL("/sitemap.xml", origin))).text();
 const portfolioResponse = await fetch(new URL("/portofolio", origin));
 assert.equal(portfolioResponse.status, 200);
 const portfolio = (await portfolioResponse.text()).replaceAll("<!-- -->", "");
 assert.match(portfolio, /<h1[\s\S]*?Portofolio/);
 assert.match(portfolio, /Contoh konsep \/ Bukan proyek klien/);
-assert.equal([...portfolio.matchAll(/<article class="project-card/g)].length, projectPaths.length);
+assert.equal([...portfolio.matchAll(/<article class="project-card/g)].length, 6);
 const listingPaths = [...new Set([...portfolio.matchAll(/href="(\/portofolio\/[^"#]+)"/g)].map((match) => match[1]))];
-assert.deepEqual(listingPaths, projectPaths);
+assert.equal(listingPaths.length, 6);
+assert.deepEqual(homepagePaths, listingPaths.slice(0, 3));
+const projectPaths = listingPaths;
+for (const name of ["Santara Commerce", "Arunika Finance", "LogistikKu", "EduSpace", "MedikaPlus", "AgriLink"]) {
+  assert.ok(portfolio.includes(name), `${name} is missing from the portfolio listing`);
+}
 assert.match(portfolio, /rel="canonical" href="https:\/\/temuweb.id\/portofolio"/);
 assert.match(portfolio, /Nomor WhatsApp ini masih demo/);
 assert.ok(sitemap.includes("<loc>https://temuweb.id/portofolio</loc>"));
-assert.match(html, /Lihat semua portofolio/);
+assert.match(html, /Lihat Semua Portofolio/);
+assert.equal([...html.matchAll(/<article class="project-card/g)].length, 3);
+assert.match(html, /href="\/layanan"[^>]*>Lihat Semua Layanan/);
 for (const [index, path] of projectPaths.entries()) {
   const response = await fetch(new URL(path, origin));
   assert.equal(response.status, 200, `${path} should exist`);
@@ -113,3 +129,5 @@ for (const path of articlePaths) {
 }
 assert.equal((await fetch(new URL("/artikel/tidak-ada", origin))).status, 404);
 console.log("Homepage, portfolios, articles, legal pages, and metadata routes respond correctly.");
+await import("./contact-smoke.mjs");
+await import("./services-smoke.mjs");
